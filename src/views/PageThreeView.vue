@@ -14,29 +14,29 @@
         </div>
         <p>Send an optional message</p>
         <form action="">
-          <div class="row">
-            <div class="col-md-12">
+          <div class="row form-row">
+            <div class="col-md-12 column">
               <textarea
                 name="massage"
                 id="massage"
                 cols="5"
                 rows="5"
-                class="form-control"
+                class="form-control input-control"
                 placeholder="Your Message Here!"
                 v-model="message"
               ></textarea>
             </div>
 
-            <div class="col-md-4 mt-4">
-              <div class="form-check form-check-inline w-100">
+            <div class="col-md-4 mt-4 column">
+              <div class="form-check form-check-inline checkbox-inline w-100">
                 <input
-                  class="form-check-input"
+                  class="form-check-input checkbox-input"
                   type="radio"
                   name="inlineRadioOptions"
                   id="inlineRadio2"
                   value="option2"
                 />
-                <label class="form-check-label" for="inlineRadio2"
+                <label class="form-check-label checkbox-label" for="inlineRadio2"
                   >Please accept
                   <a href="" class="link-terms"
                     >terms and conditions ?</a
@@ -120,7 +120,7 @@ h3 {
   padding-right: 51px;
 }
 
-.row {
+.form-row {
   padding-top: 65px;
   padding-bottom: 30px;
 }
@@ -129,7 +129,7 @@ h3 {
   text-align: center;
 }
 
-.form-control {
+.input-control {
   border: none;
   outline: none;
   border-bottom: 2px solid #e6e6e6;
@@ -138,31 +138,31 @@ h3 {
   color: #666;
 }
 
-.form-control:focus {
+.input-control:focus {
   box-shadow: none;
   outline: none;
   border-bottom: 2px solid #e6e6e6;
 }
 
-.form-control::placeholder {
+.input-control::placeholder {
   color: #666;
 }
 
-.form-check-input[type="checkbox"] {
+.chekbox-input[type="checkbox"] {
   border-radius: 50%;
   color: #e6e6e6;
 }
 
-.form-check-input:focus {
+.checkbox-input:focus {
   box-shadow: none;
   border-color: #999;
 }
-.form-check-input:checked {
+.checkbox-input:checked {
   background-color: #999;
   border-color: #999;
 }
 
-.form-check-label {
+.checkbox-label {
   color: #666;
 }
 
@@ -224,25 +224,15 @@ h3 {
     padding-left: 20px;
     padding-right: 20px;
   }
-  .row {
+  .form-row {
     margin-bottom: 100px;
   }
 
-  .form-content-input {
-    padding-top: 65px;
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-
-  .form-control {
+  .input-control {
     margin-top: 5px;
   }
-
-  .col-md-6 {
-    margin-bottom: 20px;
-  }
-
-  .col-md-12 {
+  
+  .column {
     margin-bottom: 20px;
   }
 
@@ -260,7 +250,7 @@ h3 {
     width: 50%;
   }
 
-  .form-check-inline {
+  .checkbox-inline {
     width: 70px;
   }
 }

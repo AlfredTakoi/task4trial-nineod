@@ -14,25 +14,25 @@
         </div>
         <p>Please fill with your details</p>
         <form action="" method="post">
-          <div class="row">
-            <div class="col-md-6 col-sm-12">
+          <div class="row form-row">
+            <div class="col-md-6 col-sm-12 column">
               <input
                 type="text"
-                class="form-control"
+                class="form-control input-control"
                 placeholder="Full Name"
                 style="color: #666"
                 v-model="fullName"
               />
+            </div> 
+
+            <div class="col-md-6 column">
+              <input type="text" class="form-control input-control" placeholder="Last Name" />
             </div>
 
-            <div class="col-md-6">
-              <input type="text" class="form-control" placeholder="Last Name" />
-            </div>
-
-            <div class="col-md-6">
+            <div class="col-md-6 column">
               <input
                 type="text"
-                class="form-control"
+                class="form-control input-control"
                 placeholder="Your Email"
               />
             </div>
@@ -40,35 +40,35 @@
             <div class="col-md-6">
               <input
                 type="text"
-                class="form-control"
+                class="form-control input-control"
                 placeholder="Phone Number"
               />
             </div>
 
-            <div class="col-md-6">
-              <input type="text" class="form-control" placeholder="Age" />
+            <div class="col-md-6 column">
+              <input type="text" class="form-control input-control" placeholder="Age" />
             </div>
 
-            <div class="col-md-6">
-              <div class="form-check form-check-inline mt-3">
+            <div class="col-md-6 column">
+              <div class="form-check form-check-inline mt-3 checkbox-inline ">
                 <input
-                  class="form-check-input"
+                  class="form-check-input checkbox-input"
                   type="checkbox"
                   id="inlineCheckbox2"
                   value="option1"
                 />
-                <label class="form-check-label" for="inlineCheckbox1"
+                <label class="form-check-label check-label" for="inlineCheckbox1"
                   >Male</label
                 >
               </div>
-              <div class="form-check form-check-inline">
+              <div class="form-check form-check-inline checkbox-inline">
                 <input
-                  class="form-check-input"
+                  class="form-check-input checkbox-input"
                   type="checkbox"
                   id="inlineCheckbox2"
                   value="option2"
                 />
-                <label class="form-check-label" for="inlineCheckbox2"
+                <label class="form-check-label check-label" for="inlineCheckbox2"
                   >Female</label
                 >
               </div>
@@ -83,7 +83,7 @@
                   id="inlineRadio2"
                   value="option2"
                 />
-                <label class="form-check-label" for="inlineRadio2"
+                <label class="form-check-label check-label" for="inlineRadio2"
                   >Nor again is there anyone who loves or pursues or desires to
                   obtaini. Backward</label
                 >
@@ -169,7 +169,7 @@ h3 {
   padding-right: 51px;
 }
 
-.row {
+.form-row {
   padding-top: 65px;
 }
 
@@ -177,7 +177,7 @@ h3 {
   text-align: center;
 }
 
-.form-control {
+.input-control {
   border: none;
   outline: none;
   border-bottom: 2px solid #e6e6e6;
@@ -189,35 +189,35 @@ input[type="text"] {
   color: #666;
 }
 
-.form-control:focus {
+.input-control:focus {
   box-shadow: none;
   outline: none;
   border-bottom: 2px solid #e6e6e6;
 }
 
-.form-control::placeholder {
+.input-control::placeholder {
   color: #666;
 }
 
-.form-check-input[type="checkbox"] {
+.checkbox-input[type="checkbox"] {
   border-radius: 50%;
   color: #e6e6e6;
 }
 
-.form-check-inline {
+.checkbox-inline {
   width: 150px;
 }
 
-.form-check-input:focus {
+.checkbox-input:focus {
   box-shadow: none;
   border-color: #999;
 }
-.form-check-input:checked {
+.checkbox-input:checked {
   background-color: #999;
   border-color: #999;
 }
 
-.form-check-label {
+.check-label {
   color: #666;
 }
 
@@ -261,11 +261,11 @@ input[type="text"] {
     padding-right: 20px;
   }
 
-  .form-control {
+  .input-control {
     margin-top: 5px;
   }
 
-  .col-md-6 {
+  .column {
     margin-bottom: 20px;
   }
   .btn-forward {
@@ -279,7 +279,7 @@ input[type="text"] {
     margin-top: 100px;
   }
 
-  .form-check-inline {
+  .checkbox-inline {
     width: 70px;
   }
 }

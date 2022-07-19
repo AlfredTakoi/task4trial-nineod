@@ -14,27 +14,27 @@
         </div>
         <p>Please fill with additional info</p>
         <form action="">
-          <div class="row">
-            <div class="col-md-12">
+          <div class="row form-row">
+            <div class="col-md-12 column">
               <input
                 type="text"
-                class="form-control"
+                class="form-control input-control"
                 placeholder="Address"
                 style="color: #666"
                 v-model="address"
               />
             </div>
 
-            <div class="col-md-6">
-              <input type="text" class="form-control" placeholder="City" />
+            <div class="col-md-6 column">
+              <input type="text" class="form-control input-control" placeholder="City" />
             </div>
 
-            <div class="col-md-6">
-              <input type="text" class="form-control" placeholder="Zip Code" />
+            <div class="col-md-6 column">
+              <input type="text" class="form-control input-control" placeholder="Zip Code" />
             </div>
 
-            <div class="col-md-6">
-              <select name="country" id="country" class="form-select">
+            <div class="col-md-6 column">
+              <select name="country" id="country" class="form-select input-select">
                 <option selected hidden>Your Country</option>
                 <option value="United States">United States</option>
                 <option value="United Kingdom">United Kingdom</option>
@@ -117,7 +117,7 @@ h3 {
   padding-right: 51px;
 }
 
-.row {
+.form-row {
   padding-top: 65px;
 }
 
@@ -125,7 +125,7 @@ h3 {
   text-align: center;
 }
 
-.form-control {
+.input-control {
   border: none;
   outline: none;
   border-bottom: 2px solid #e6e6e6;
@@ -137,25 +137,21 @@ input[type="text"] {
   color: #666;
 }
 
-.col-md-6 {
+.column {
   margin-bottom: 20px;
 }
 
-.col-md-12 {
-  margin-bottom: 20px;
-}
-
-.form-control:focus {
+.input-control:focus {
   box-shadow: none;
   outline: none;
   border-bottom: 2px solid #e6e6e6;
 }
 
-.form-control::placeholder {
+.input-control::placeholder {
   color: #666;
 }
 
-.form-select {
+.input-select {
   border: none;
   outline: none;
   border-bottom: 2px solid #e6e6e6;
@@ -164,7 +160,7 @@ input[type="text"] {
   color: #666;
 }
 
-.form-select:focus {
+.input-select:focus {
   box-shadow: none;
   outline: none;
   border-bottom: 2px solid #e6e6e6;
@@ -226,15 +222,11 @@ input[type="text"] {
     padding-right: 20px;
   }
 
-  .form-control {
+  .input-control {
     margin-top: 5px;
   }
 
-  .col-md-6 {
-    margin-bottom: 20px;
-  }
-
-  .col-md-12 {
+  .column {
     margin-bottom: 20px;
   }
 
