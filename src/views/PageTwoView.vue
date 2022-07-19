@@ -94,7 +94,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-@media (max-width: 1800px) {
+  .section {
+    height: 100vh
+  }
+
   .img {
     height: 636px;
     object-fit: contain;
@@ -218,7 +221,7 @@ export default {
   .btn-backward:hover {
     background-color: #cac8c3;
   }
-}
+
 
 @media (max-width: 768px) {
   .section {
