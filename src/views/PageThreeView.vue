@@ -61,7 +61,7 @@
             <button
               class="btn-forward"
               type="submit"
-              @click="validation()"
+              @click.prevent="validation()"
             >
               Submit <i class="bi bi-check"></i>
             </button>
@@ -89,8 +89,8 @@ export default {
       if (this.message == "") {
         $(".form-control").attr("required", true);
       } else {
-        this.$router.push("/pagethree");
         alert("success register");
+        this.message = null
       }
     },
   },
@@ -293,7 +293,7 @@ export default {
     background: #e9e0cf;
     margin-left: -25px;
   }
-  
+
   .wizard-steps .active {
     background: #6d7f52
   }

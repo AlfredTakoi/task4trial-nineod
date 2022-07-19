@@ -1,7 +1,9 @@
 <template>
-  <transition name="fade">
-    <router-view></router-view>
-  </transition>
+  <router-view v-slot="{ Component }">
+    <transition name="route" mode="out-in">
+      <component :is="Component"></component>
+    </transition>
+  </router-view>
 </template>
 
 <style>
@@ -25,5 +27,15 @@ nav a.router-link-exact-active {
   color: #42b983;
 }
 
+.route-enter-active,
+.route-leave-active{
+  transition-duration: 0.3s;
+  transition-property: opacity;
+  transition-timing-function: ease;
+}
 
+.route-enter,
+.route-leave-active{
+  opacity: 0;
+}
 </style>
