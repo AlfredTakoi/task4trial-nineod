@@ -23,10 +23,14 @@
                 style="color: #666"
                 v-model="fullName"
               />
-            </div> 
+            </div>
 
             <div class="col-md-6 column">
-              <input type="text" class="form-control input-control" placeholder="Last Name" />
+              <input
+                type="text"
+                class="form-control input-control"
+                placeholder="Last Name"
+              />
             </div>
 
             <div class="col-md-6 column">
@@ -46,18 +50,25 @@
             </div>
 
             <div class="col-md-6 column">
-              <input type="text" class="form-control input-control" placeholder="Age" />
+              <input
+                type="text"
+                class="form-control input-control"
+                placeholder="Age"
+                v-model="age"
+              />
             </div>
 
             <div class="col-md-6 column">
-              <div class="form-check form-check-inline mt-3 checkbox-inline ">
+              <div class="form-check form-check-inline mt-3 checkbox-inline">
                 <input
                   class="form-check-input checkbox-input"
                   type="checkbox"
                   id="inlineCheckbox2"
                   value="option1"
                 />
-                <label class="form-check-label check-label" for="inlineCheckbox1"
+                <label
+                  class="form-check-label check-label"
+                  for="inlineCheckbox1"
                   >Male</label
                 >
               </div>
@@ -68,7 +79,9 @@
                   id="inlineCheckbox2"
                   value="option2"
                 />
-                <label class="form-check-label check-label" for="inlineCheckbox2"
+                <label
+                  class="form-check-label check-label"
+                  for="inlineCheckbox2"
                   >Female</label
                 >
               </div>
@@ -103,146 +116,147 @@
 </template>
 
 <script>
-import $ from 'jquery'
+import $ from "jquery";
 
 export default {
   name: "HelloWorld",
   props: {
     msg: String,
   },
-  data(){
+  data() {
     return {
-      fullName:'',
-    }
+      fullName: "",
+    };
   },
   methods: {
-    validation(){
-      if(this.fullName == ''){
-        $('.form-control').attr('required', true)
+    validation() {
+      if (this.fullName == "") {
+        $(".form-control").attr("required", true);
       } else {
-        this.$router.push('pagetwo')
+        this.$router.push("/pagetwo");
       }
-    }
-  }
-
+    },
+  },
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.img {
-  height: 636px;
-  object-fit: contain;
-}
+@media (max-width: 1800px) {
+  .img {
+    height: 636px;
+    object-fit: contain;
+  }
 
-h3,
-p {
-  text-align: center;
-}
+  h3,
+  p {
+    text-align: center;
+  }
 
-p {
-  font-size: 20px;
-  color: #6d7f52;
-}
+  p {
+    font-size: 20px;
+    color: #6d7f52;
+  }
 
-h3 {
-  border: 1px solid;
-  align-items: center;
-  font-size: 22px;
-  color: #453e79;
-  text-transform: uppercase;
-  letter-spacing: 7px;
-  padding: 5px 15px;
-  position: relative;
-  display: inline-block;
-  border: 1px solid #dad8e4;
-  margin-bottom: 25px;
-}
+  h3 {
+    border: 1px solid;
+    align-items: center;
+    font-size: 22px;
+    color: #453e79;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+    padding: 5px 15px;
+    position: relative;
+    display: inline-block;
+    border: 1px solid #dad8e4;
+    margin-bottom: 25px;
+  }
 
-.col-md-6 {
-  margin-bottom: 30px;
-}
+  .col-md-6 {
+    margin-bottom: 30px;
+  }
 
-.form-content {
-  padding-top: 65px;
-  padding-left: 51px;
-  padding-right: 51px;
-}
+  .form-content {
+    padding-top: 65px;
+    padding-left: 51px;
+    padding-right: 51px;
+  }
 
-.form-row {
-  padding-top: 65px;
-}
+  .form-row {
+    padding-top: 65px;
+  }
 
-.form-header {
-  text-align: center;
-}
+  .form-header {
+    text-align: center;
+  }
 
-.input-control {
-  border: none;
-  outline: none;
-  border-bottom: 2px solid #e6e6e6;
-  border-radius: 0px;
-  padding: 6px 0px;
-}
+  .input-control {
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #e6e6e6;
+    border-radius: 0px;
+    padding: 6px 0px;
+  }
 
-input[type="text"] {
-  color: #666;
-}
+  input[type="text"] {
+    color: #666;
+  }
 
-.input-control:focus {
-  box-shadow: none;
-  outline: none;
-  border-bottom: 2px solid #e6e6e6;
-}
+  .input-control:focus {
+    box-shadow: none;
+    outline: none;
+    border-bottom: 2px solid #e6e6e6;
+  }
 
-.input-control::placeholder {
-  color: #666;
-}
+  .input-control::placeholder {
+    color: #666;
+  }
 
-.checkbox-input[type="checkbox"] {
-  border-radius: 50%;
-  color: #e6e6e6;
-}
+  .checkbox-input[type="checkbox"] {
+    border-radius: 50%;
+    color: #e6e6e6;
+  }
 
-.checkbox-inline {
-  width: 150px;
-}
+  .checkbox-inline {
+    width: 150px;
+  }
 
-.checkbox-input:focus {
-  box-shadow: none;
-  border-color: #999;
-}
-.checkbox-input:checked {
-  background-color: #999;
-  border-color: #999;
-}
+  .checkbox-input:focus {
+    box-shadow: none;
+    border-color: #999;
+  }
+  .checkbox-input:checked {
+    background-color: #999;
+    border-color: #999;
+  }
 
-.check-label {
-  color: #666;
-}
+  .check-label {
+    color: #666;
+  }
 
-.button-area {
-  width: 100%;
-  display: flex;
-  justify-content: end;
-  margin-top: 20px;
-}
+  .button-area {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    margin-top: 20px;
+  }
 
-.btn-forward {
-  float: right;
-  width: 25%;
-  height: 50px;
-  padding: 0px 10px;
-  align-items: center;
-  outline: none;
-  border: none;
-  background: #e9e0cf;
-  color: #666;
-  margin-right: 30px;
-}
+  .btn-forward {
+    float: right;
+    width: 25%;
+    height: 50px;
+    padding: 0px 10px;
+    align-items: center;
+    outline: none;
+    border: none;
+    background: #e9e0cf;
+    color: #666;
+    margin-right: 30px;
+  }
 
-.btn-forward:hover {
-  background-color: #cac8c3;
+  .btn-forward:hover {
+    background-color: #cac8c3;
+  }
 }
 
 @media (max-width: 768px) {

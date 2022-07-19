@@ -26,15 +26,27 @@
             </div>
 
             <div class="col-md-6 column">
-              <input type="text" class="form-control input-control" placeholder="City" />
+              <input
+                type="text"
+                class="form-control input-control"
+                placeholder="City"
+              />
             </div>
 
             <div class="col-md-6 column">
-              <input type="text" class="form-control input-control" placeholder="Zip Code" />
+              <input
+                type="text"
+                class="form-control input-control"
+                placeholder="Zip Code"
+              />
             </div>
 
             <div class="col-md-6 column">
-              <select name="country" id="country" class="form-select input-select">
+              <select
+                name="country"
+                id="country"
+                class="form-select input-select"
+              >
                 <option selected hidden>Your Country</option>
                 <option value="United States">United States</option>
                 <option value="United Kingdom">United Kingdom</option>
@@ -57,16 +69,16 @@
 </template>
 
 <script>
-import $ from 'jquery'
+import $ from "jquery";
 export default {
   name: "HelloWorld",
   props: {
     msg: String,
   },
-  data(){
-    return{
-      address: ''
-    }
+  data() {
+    return {
+      address: "",
+    };
   },
   methods: {
     validation() {
@@ -82,128 +94,130 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.img {
-  height: 636px;
-  object-fit: contain;
-}
+@media (max-width: 1800px) {
+  .img {
+    height: 636px;
+    object-fit: contain;
+  }
 
-h3,
-p {
-  text-align: center;
-}
+  h3,
+  p {
+    text-align: center;
+  }
 
-p {
-  font-size: 20px;
-  color: #6d7f52;
-}
+  p {
+    font-size: 20px;
+    color: #6d7f52;
+  }
 
-h3 {
-  border: 1px solid;
-  align-items: center;
-  font-size: 22px;
-  color: #453e79;
-  text-transform: uppercase;
-  letter-spacing: 7px;
-  padding: 5px 15px;
-  position: relative;
-  display: inline-block;
-  border: 1px solid #dad8e4;
-  margin-bottom: 25px;
-}
+  h3 {
+    border: 1px solid;
+    align-items: center;
+    font-size: 22px;
+    color: #453e79;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+    padding: 5px 15px;
+    position: relative;
+    display: inline-block;
+    border: 1px solid #dad8e4;
+    margin-bottom: 25px;
+  }
 
-.form-content {
-  padding-top: 65px;
-  padding-left: 51px;
-  padding-right: 51px;
-}
+  .form-content {
+    padding-top: 65px;
+    padding-left: 51px;
+    padding-right: 51px;
+  }
 
-.form-row {
-  padding-top: 65px;
-}
+  .form-row {
+    padding-top: 65px;
+  }
 
-.form-header {
-  text-align: center;
-}
+  .form-header {
+    text-align: center;
+  }
 
-.input-control {
-  border: none;
-  outline: none;
-  border-bottom: 2px solid #e6e6e6;
-  border-radius: 0px;
-  padding: 6px 0px;
-}
+  .input-control {
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #e6e6e6;
+    border-radius: 0px;
+    padding: 6px 0px;
+  }
 
-input[type="text"] {
-  color: #666;
-}
+  input[type="text"] {
+    color: #666;
+  }
 
-.column {
-  margin-bottom: 20px;
-}
+  .column {
+    margin-bottom: 20px;
+  }
 
-.input-control:focus {
-  box-shadow: none;
-  outline: none;
-  border-bottom: 2px solid #e6e6e6;
-}
+  .input-control:focus {
+    box-shadow: none;
+    outline: none;
+    border-bottom: 2px solid #e6e6e6;
+  }
 
-.input-control::placeholder {
-  color: #666;
-}
+  .input-control::placeholder {
+    color: #666;
+  }
 
-.input-select {
-  border: none;
-  outline: none;
-  border-bottom: 2px solid #e6e6e6;
-  border-radius: 0px;
-  padding: 6px 0px;
-  color: #666;
-}
+  .input-select {
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #e6e6e6;
+    border-radius: 0px;
+    padding: 6px 0px;
+    color: #666;
+  }
 
-.input-select:focus {
-  box-shadow: none;
-  outline: none;
-  border-bottom: 2px solid #e6e6e6;
-}
+  .input-select:focus {
+    box-shadow: none;
+    outline: none;
+    border-bottom: 2px solid #e6e6e6;
+  }
 
-.button-area {
-  width: 100%;
-  display: flex;
-  justify-content: end;
-  margin-top: 50px;
-}
+  .button-area {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    margin-top: 50px;
+  }
 
-.btn-forward {
-  float: right;
-  width: 25%;
-  height: 50px;
-  padding: 0px 10px;
-  align-items: center;
-  outline: none;
-  border: none;
-  background: #6d7f52;
-  color: #e9e0cf;
-}
+  .btn-forward {
+    float: right;
+    width: 25%;
+    height: 50px;
+    padding: 0px 10px;
+    align-items: center;
+    outline: none;
+    border: none;
+    background: #6d7f52;
+    color: #e9e0cf;
+  }
 
-.btn-backward {
-  float: right;
-  width: 25%;
-  height: 50px;
-  padding: 0px 10px;
-  align-items: center;
-  outline: none;
-  border: none;
-  background: #e9e0cf;
-  color: #666;
-  margin-right: 30px;
-}
+  .btn-backward {
+    float: right;
+    width: 25%;
+    height: 50px;
+    padding: 0px 10px;
+    align-items: center;
+    outline: none;
+    border: none;
+    background: #e9e0cf;
+    color: #666;
+    margin-right: 30px;
+  }
 
-.btn-forward:hover {
-  background-color: #7c8f60;
-}
+  .btn-forward:hover {
+    background-color: #7c8f60;
+  }
 
-.btn-backward:hover {
-  background-color: #cac8c3;
+  .btn-backward:hover {
+    background-color: #cac8c3;
+  }
 }
 
 @media (max-width: 768px) {
