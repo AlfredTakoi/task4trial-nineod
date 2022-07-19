@@ -12,6 +12,13 @@
         <div class="form-header">
           <h3>REGISTRATION</h3>
         </div>
+        <div class="wizard-steps">
+          <span class="dot active"></span>
+          <span class="line"></span>
+          <span class="dot"></span>
+          <span class="line"></span>
+          <span class="dot"></span>
+        </div>
         <p>Please fill with your details</p>
         <form action="" method="post">
           <div class="row form-row">
@@ -41,7 +48,7 @@
               />
             </div>
 
-            <div class="col-md-6">
+            <div class="col-md-6 column">
               <input
                 type="text"
                 class="form-control input-control"
@@ -174,7 +181,33 @@ export default {
     margin-bottom: 25px;
   }
 
-  .col-md-6 {
+  .wizard-steps {
+    text-align: center;
+    margin: 10px 0px;
+  }
+
+   .wizard-steps .dot{
+    width: 20px;
+    margin: 0px 50px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #e9e0cf;
+    display: inline-block;
+  }
+  .wizard-steps .active {
+    background: #6d7f52
+  }
+
+  .wizard-steps .line {
+    width: 80px;
+    height: 2px;
+    background: #e9e0cf;
+    position: absolute;
+    margin-top: 9px;
+    margin-left: -40px;
+  }
+
+  .column {
     margin-bottom: 30px;
   }
 
@@ -268,6 +301,28 @@ export default {
   .img {
     height: 455px;
     object-fit: contain;
+  }
+
+  .wizard-steps {
+    text-align: center;
+    margin: 10px 0px;
+  }
+
+   .wizard-steps .dot{
+    width: 15px;
+    margin: 0px 30px;
+    height: 15px;
+    
+  }
+  .wizard-steps .active {
+    background: #6d7f52
+  }
+
+  .wizard-steps .line {
+    width: 50px;
+    height: 2px;
+    background: #e9e0cf;
+    margin-left: -25px;
   }
 
   .form-content {

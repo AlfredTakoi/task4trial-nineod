@@ -12,6 +12,13 @@
         <div class="form-header">
           <h3>REGISTRATION</h3>
         </div>
+        <div class="wizard-steps">
+          <span class="dot active"></span>
+          <span class="line active"></span>
+          <span class="dot active"></span>
+          <span class="line"></span>
+          <span class="dot"></span>
+        </div>
         <p>Please fill with additional info</p>
         <form action="">
           <div class="row form-row">
@@ -94,134 +101,159 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  .section {
-    height: 100vh
-  }
+.section {
+  height: 100vh;
+}
 
-  .img {
-    height: 636px;
-    object-fit: contain;
-  }
+.img {
+  height: 636px;
+  object-fit: contain;
+}
 
-  h3,
-  p {
-    text-align: center;
-  }
+h3,
+p {
+  text-align: center;
+}
 
-  p {
-    font-size: 20px;
-    color: #6d7f52;
-  }
+p {
+  font-size: 20px;
+  color: #6d7f52;
+}
 
-  h3 {
-    border: 1px solid;
-    align-items: center;
-    font-size: 22px;
-    color: #453e79;
-    text-transform: uppercase;
-    letter-spacing: 7px;
-    padding: 5px 15px;
-    position: relative;
-    display: inline-block;
-    border: 1px solid #dad8e4;
-    margin-bottom: 25px;
-  }
+h3 {
+  border: 1px solid;
+  align-items: center;
+  font-size: 22px;
+  color: #453e79;
+  text-transform: uppercase;
+  letter-spacing: 7px;
+  padding: 5px 15px;
+  position: relative;
+  display: inline-block;
+  border: 1px solid #dad8e4;
+  margin-bottom: 25px;
+}
 
-  .form-content {
-    padding-top: 65px;
-    padding-left: 51px;
-    padding-right: 51px;
-  }
+.wizard-steps .dot {
+  width: 20px;
+  margin: 0px 50px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #e9e0cf;
+  display: inline-block;
+}
 
-  .form-row {
-    padding-top: 65px;
-  }
+.wizard-steps .line {
+  width: 80px;
+  height: 2px;
+  background: #e9e0cf;
+  position: absolute;
+  margin-top: 9px;
+  margin-left: -40px;
+}
+.wizard-steps {
+  text-align: center;
+  margin: 10px 0px;
+}
 
-  .form-header {
-    text-align: center;
-  }
+.wizard-steps .active {
+  background: #6d7f52;
+}
 
-  .input-control {
-    border: none;
-    outline: none;
-    border-bottom: 2px solid #e6e6e6;
-    border-radius: 0px;
-    padding: 6px 0px;
-  }
+.form-content {
+  padding-top: 65px;
+  padding-left: 51px;
+  padding-right: 51px;
+}
 
-  input[type="text"] {
-    color: #666;
-  }
+.form-row {
+  padding-top: 65px;
+}
 
-  .column {
-    margin-bottom: 20px;
-  }
+.form-header {
+  text-align: center;
+}
 
-  .input-control:focus {
-    box-shadow: none;
-    outline: none;
-    border-bottom: 2px solid #e6e6e6;
-  }
+.input-control {
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #e6e6e6;
+  border-radius: 0px;
+  padding: 6px 0px;
+}
 
-  .input-control::placeholder {
-    color: #666;
-  }
+input[type="text"] {
+  color: #666;
+}
 
-  .input-select {
-    border: none;
-    outline: none;
-    border-bottom: 2px solid #e6e6e6;
-    border-radius: 0px;
-    padding: 6px 0px;
-    color: #666;
-  }
+.column {
+  margin-bottom: 20px;
+}
 
-  .input-select:focus {
-    box-shadow: none;
-    outline: none;
-    border-bottom: 2px solid #e6e6e6;
-  }
+.input-control:focus {
+  box-shadow: none;
+  outline: none;
+  border-bottom: 2px solid #e6e6e6;
+}
 
-  .button-area {
-    width: 100%;
-    display: flex;
-    justify-content: end;
-    margin-top: 50px;
-  }
+.input-control::placeholder {
+  color: #666;
+}
 
-  .btn-forward {
-    float: right;
-    width: 25%;
-    height: 50px;
-    padding: 0px 10px;
-    align-items: center;
-    outline: none;
-    border: none;
-    background: #6d7f52;
-    color: #e9e0cf;
-  }
+.input-select {
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #e6e6e6;
+  border-radius: 0px;
+  padding: 6px 0px;
+  color: #666;
+}
 
-  .btn-backward {
-    float: right;
-    width: 25%;
-    height: 50px;
-    padding: 0px 10px;
-    align-items: center;
-    outline: none;
-    border: none;
-    background: #e9e0cf;
-    color: #666;
-    margin-right: 30px;
-  }
+.input-select:focus {
+  box-shadow: none;
+  outline: none;
+  border-bottom: 2px solid #e6e6e6;
+}
 
-  .btn-forward:hover {
-    background-color: #7c8f60;
-  }
+.button-area {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  margin-top: 50px;
+}
 
-  .btn-backward:hover {
-    background-color: #cac8c3;
-  }
+.btn-forward {
+  float: right;
+  width: 25%;
+  height: 50px;
+  padding: 0px 10px;
+  align-items: center;
+  outline: none;
+  border: none;
+  background: #6d7f52;
+  color: #e9e0cf;
+}
 
+.btn-backward {
+  float: right;
+  width: 25%;
+  height: 50px;
+  padding: 0px 10px;
+  align-items: center;
+  outline: none;
+  border: none;
+  background: #e9e0cf;
+  color: #666;
+  margin-right: 30px;
+}
+
+.btn-forward:hover {
+  background-color: #7c8f60;
+}
+
+.btn-backward:hover {
+  background-color: #cac8c3;
+}
 
 @media (max-width: 768px) {
   .section {
@@ -241,6 +273,26 @@ export default {
 
   .input-control {
     margin-top: 5px;
+  }
+
+  .wizard-steps {
+    text-align: center;
+    margin: 10px 0px;
+  }
+
+  .wizard-steps .dot {
+    width: 15px;
+    margin: 0px 30px;
+    height: 15px;
+  }
+  .wizard-steps .line {
+    width: 50px;
+    height: 2px;
+    background: #e9e0cf;
+    margin-left: -25px;
+  }
+  .wizard-steps .active {
+    background: #6d7f52;
   }
 
   .column {

@@ -12,6 +12,13 @@
         <div class="form-header">
           <h3>REGISTRATION</h3>
         </div>
+        <div class="wizard-steps">
+          <span class="dot active"></span>
+          <span class="line active"></span>
+          <span class="dot active"></span>
+          <span class="line active"></span>
+          <span class="dot active"></span>
+        </div>
         <p>Send an optional message</p>
         <form action="">
           <div class="row form-row">
@@ -54,7 +61,7 @@
             <button
               class="btn-forward"
               type="submit"
-              @click.prevent="validation()"
+              @click="validation()"
             >
               Submit <i class="bi bi-check"></i>
             </button>
@@ -123,6 +130,34 @@ export default {
     border: 1px solid #dad8e4;
     margin-bottom: 25px;
   }
+
+  .wizard-steps .dot {
+  width: 20px;
+  margin: 0px 50px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #e9e0cf;
+  display: inline-block;
+}
+
+.wizard-steps .line {
+  width: 80px;
+  height: 2px;
+  background: #e9e0cf;
+  position: absolute;
+  margin-top: 9px;
+  margin-left: -40px;
+}
+.wizard-steps {
+  text-align: center;
+  margin: 10px 0px;
+}
+
+.wizard-steps .active {
+  background: #6d7f52;
+}
+
+
 
   .form-content {
     padding-top: 65px;
@@ -239,6 +274,31 @@ export default {
   .form-row {
     margin-bottom: 100px;
   }
+
+  .wizard-steps {
+    text-align: center;
+    margin: 10px 0px;
+  }
+
+   .wizard-steps .dot{
+    width: 15px;
+    margin: 0px 30px;
+    height: 15px;
+    
+  }
+
+  .wizard-steps .line {
+    width: 50px;
+    height: 2px;
+    background: #e9e0cf;
+    margin-left: -25px;
+  }
+  
+  .wizard-steps .active {
+    background: #6d7f52
+  }
+
+  
 
   .input-control {
     margin-top: 5px;
