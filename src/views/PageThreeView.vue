@@ -20,7 +20,7 @@
           <span class="dot active"></span>
         </div>
         <p>Send an optional message</p>
-        <form action="">
+        <form action="" @submit.prevent="validation">
           <div class="row form-row">
             <div class="col-md-12 column">
               <textarea
@@ -55,13 +55,12 @@
             </div>
           </div>
           <div class="button-area">
-            <button class="btn-backward" @click="$router.push('/pagetwo')">
+            <button class="btn-backward" @click.prevent="$router.push('/pagetwo')">
               <i class="bi bi-arrow-left"> </i> Backward
             </button>
             <button
               class="btn-forward"
               type="submit"
-              @click.prevent="validation()"
             >
               Submit <i class="bi bi-check"></i>
             </button>

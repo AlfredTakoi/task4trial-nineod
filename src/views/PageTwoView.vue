@@ -20,7 +20,7 @@
           <span class="dot"></span>
         </div>
         <p>Please fill with additional info</p>
-        <form action="">
+        <form action="" @submit.prevent="validation">
           <div class="row form-row">
             <div class="col-md-12 column">
               <input
@@ -62,10 +62,10 @@
             </div>
           </div>
           <div class="button-area">
-            <button class="btn-backward" @click="$router.push('/')">
+            <button class="btn-backward" @click.prevent="$router.push('/')">
               <i class="bi bi-arrow-left"> </i> Backward
             </button>
-            <button class="btn-forward" type="submit" @click="validation()">
+            <button class="btn-forward" type="submit">
               Forward <i class="bi bi-arrow-right"></i>
             </button>
           </div>

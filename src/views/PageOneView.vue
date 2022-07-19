@@ -20,7 +20,7 @@
           <span class="dot"></span>
         </div>
         <p>Please fill with your details</p>
-        <form action="" method="post">
+        <form action="" method="post" @submit.prevent="validation">
           <div class="row form-row">
             <div class="col-md-6 col-sm-12 column">
               <input
@@ -29,6 +29,7 @@
                 placeholder="Full Name"
                 style="color: #666"
                 v-model="fullName"
+                required
               />
             </div>
 
@@ -61,7 +62,6 @@
                 type="text"
                 class="form-control input-control"
                 placeholder="Age"
-                v-model="age"
               />
             </div>
 
@@ -112,7 +112,7 @@
           </div>
 
           <div class="button-area">
-            <button class="btn-forward" type="submit" @click="validation()">
+            <button class="btn-forward" type="submit">
               Forward <i class="bi bi-arrow-right"> </i>
             </button>
           </div>
